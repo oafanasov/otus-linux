@@ -1,0 +1,185 @@
+Script started on Sat 05 Oct 2019 09:46:42 AM UTC
+]0;root@lvm:/vagrant[?1034h[root@lvm vagrant]# lsblk
+NAME                     MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                        8:0    0   40G  0 disk 
+├─sda1                     8:1    0    1M  0 part 
+├─sda2                     8:2    0    1G  0 part /boot
+└─sda3                     8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol00  253:0    0    8G  0 lvm  /
+  └─VolGroup00-LogVol01  253:1    0  1.5G  0 lvm  [SWAP]
+sdb                        8:16   0   10G  0 disk 
+sdc                        8:32   0    2G  0 disk 
+├─vg_var-lv_var_rmeta_0  253:2    0    4M  0 lvm  
+│ └─vg_var-lv_var        253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_0 253:3    0  952M  0 lvm  
+  └─vg_var-lv_var        253:6    0  952M  0 lvm  /var
+sdd                        8:48   0    1G  0 disk 
+├─vg_var-lv_var_rmeta_1  253:4    0    4M  0 lvm  
+│ └─vg_var-lv_var        253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_1 253:5    0  952M  0 lvm  
+  └─vg_var-lv_var        253:6    0  952M  0 lvm  /var
+sde                        8:64   0    1G  0 disk 
+]0;root@lvm:/vagrant[root@lvm vagrant]# lvcreate -n LogVol_Home -L 2G /dev/VolGroup00
+  Logical volume "LogVol_Home" created.
+]0;root@lvm:/vagrant[root@lvm vagrant]# mkfs.w[Kext4 /dev//[KVolGroup00/LogVol_Home 
+mke2fs 1.42.9 (28-Dec-2013)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+131072 inodes, 524288 blocks
+26214 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=536870912
+16 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks: 
+	32768, 98304, 163840, 229376, 294912
+
+Allocating group tables:  0/16     done                            
+Writing inode tables:  0/16     done                            
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information:  0/16     done
+
+]0;root@lvm:/vagrant[root@lvm vagrant]# mout /dev/VolGroup00/LogVol_Home /mnt
+bash: mout: command not found
+]0;root@lvm:/vagrant[root@lvm vagrant]# mout /dev/VolGroup00/LogVol_Home /mnt[1@n
+]0;root@lvm:/vagrant[root@lvm vagrant]# cp -ar /home/* /mnt/
+]0;root@lvm:/vagrant[root@lvm vagrant]# rm -rf /n[Khome/*
+]0;root@lvm:/vagrant[root@lvm vagrant]# mo[K[Kumount /mnt
+]0;root@lvm:/vagrant[root@lvm vagrant]# mount /dev/VolGroup00/LogVol_Home /home/[K
+]0;root@lvm:/vagrant[root@lvm vagrant]# lsblk
+NAME                       MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                          8:0    0   40G  0 disk 
+├─sda1                       8:1    0    1M  0 part 
+├─sda2                       8:2    0    1G  0 part /boot
+└─sda3                       8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol00    253:0    0    8G  0 lvm  /
+  ├─VolGroup00-LogVol01    253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol_Home 253:7    0    2G  0 lvm  /home
+sdb                          8:16   0   10G  0 disk 
+sdc                          8:32   0    2G  0 disk 
+├─vg_var-lv_var_rmeta_0    253:2    0    4M  0 lvm  
+│ └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_0   253:3    0  952M  0 lvm  
+  └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+sdd                          8:48   0    1G  0 disk 
+├─vg_var-lv_var_rmeta_1    253:4    0    4M  0 lvm  
+│ └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_1   253:5    0  952M  0 lvm  
+  └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+sde                          8:64   0    1G  0 disk 
+]0;root@lvm:/vagrant[root@lvm vagrant]# echo "`blkid | grep Home | awk '{print $2}'` /home xfs defaults 0 0" >> /etc/fstab[C[1P[1P[1P[1@e[1@x[1@t[1@4
+]0;root@lvm:/vagrant[root@lvm vagrant]# cat /r[Ketc/fstab 
+
+#
+# /etc/fstab
+# Created by anaconda on Sat May 12 18:50:26 2018
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/VolGroup00-LogVol00 /                       xfs     defaults        0 0
+UUID=570897ca-e759-4c81-90cf-389da6eee4cc /boot                   xfs     defaults        0 0
+/dev/mapper/VolGroup00-LogVol01 swap                    swap    defaults        0 0
+UUID="592fb1f6-9a84-4afa-8a1d-407f6384087b" /var ext4 defaults 0 0
+UUID="56ca9ce4-3538-413a-807d-da78a4acbcfe" /home ext4 defaults 0 0
+]0;root@lvm:/vagrant[root@lvm vagrant]# touch /home/file{1..20}
+]0;root@lvm:/vagrant[root@lvm vagrant]# cd /[K[K[K[Kll /home/
+total 20
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file1
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file10
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file11
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file12
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file13
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file14
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file15
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file16
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file17
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file18
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file19
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file2
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file20
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file3
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file4
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file5
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file6
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file7
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file8
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file9
+drwx------. 2 root    root    16384 Oct  5 09:48 [0m[01;34mlost+found[0m
+drwx------. 3 vagrant vagrant  4096 Oct  4 22:31 [01;34mvagrant[0m
+]0;root@lvm:/vagrant[root@lvm vagrant]# lvcreate -L 100MB -s -n home_snap /dev/VolGroup00/LogVol_Home
+  Rounding up size to full physical extent 128.00 MiB
+  Logical volume "home_snap" created.
+]0;root@lvm:/vagrant[root@lvm vagrant]# rm -f /home/file{11..20}
+]0;root@lvm:/vagrant[root@lvm vagrant]# rm -f /home/file{11..20}[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clvcreate -L 100MB -s -n home_snap /dev/VolGroup00/LogVol_Home[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl /home/[K
+total 20
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file1
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file10
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file2
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file3
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file4
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file5
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file6
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file7
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file8
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file9
+drwx------. 2 root    root    16384 Oct  5 09:48 [0m[01;34mlost+found[0m
+drwx------. 3 vagrant vagrant  4096 Oct  4 22:31 [01;34mvagrant[0m
+]0;root@lvm:/vagrant[root@lvm vagrant]# umount /home
+]0;root@lvm:/vagrant[root@lvm vagrant]# lvconvert --merge /dev/VolGroup00/home_snap
+  Merging of volume VolGroup00/home_snap started.
+  VolGroup00/LogVol_Home: Merged: 100.00%
+]0;root@lvm:/vagrant[root@lvm vagrant]# mount/ho[K[K[K /home/[K
+]0;root@lvm:/vagrant[root@lvm vagrant]# mount /homelvconvert --merge /dev/VolGroup00/home_snap[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cumount /home[K[3Pll /home/
+total 20
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file1
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file10
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file11
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file12
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file13
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file14
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file15
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file16
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file17
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file18
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file19
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file2
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file20
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file3
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file4
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file5
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file6
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file7
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file8
+-rw-r--r--. 1 root    root        0 Oct  5 10:08 file9
+drwx------. 2 root    root    16384 Oct  5 09:48 [0m[01;34mlost+found[0m
+drwx------. 3 vagrant vagrant  4096 Oct  4 22:31 [01;34mvagrant[0m
+]0;root@lvm:/vagrant[root@lvm vagrant]# exit[K[K[K[Klcblk[1Pblksblk
+NAME                       MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                          8:0    0   40G  0 disk 
+├─sda1                       8:1    0    1M  0 part 
+├─sda2                       8:2    0    1G  0 part /boot
+└─sda3                       8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol00    253:0    0    8G  0 lvm  /
+  ├─VolGroup00-LogVol01    253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol_Home 253:7    0    2G  0 lvm  /home
+sdb                          8:16   0   10G  0 disk 
+sdc                          8:32   0    2G  0 disk 
+├─vg_var-lv_var_rmeta_0    253:2    0    4M  0 lvm  
+│ └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_0   253:3    0  952M  0 lvm  
+  └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+sdd                          8:48   0    1G  0 disk 
+├─vg_var-lv_var_rmeta_1    253:4    0    4M  0 lvm  
+│ └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+└─vg_var-lv_var_rimage_1   253:5    0  952M  0 lvm  
+  └─vg_var-lv_var          253:6    0  952M  0 lvm  /var
+sde                          8:64   0    1G  0 disk 
+]0;root@lvm:/vagrant[root@lvm vagrant]# exit
+exit
+
+Script done on Sat 05 Oct 2019 10:12:38 AM UTC

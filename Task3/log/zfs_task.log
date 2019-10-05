@@ -1,0 +1,139 @@
+Script started on Sat 05 Oct 2019 07:09:09 PM UTC
+]0;root@lvm:/vagrant[?1034h[root@lvm vagrant]# lsblk
+NAME                       MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                          8:0    0   40G  0 disk 
+├─sda1                       8:1    0    1M  0 part 
+├─sda2                       8:2    0    1G  0 part /boot
+└─sda3                       8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol00    253:0    0    8G  0 lvm  /
+  ├─VolGroup00-LogVol01    253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol_Home 253:2    0    2G  0 lvm  /home
+sdb                          8:16   0   10G  0 disk 
+├─vg_tmp_var-lv_tmp_var    253:3    0    3G  0 lvm  /var
+└─vg_tmp_var-lv_tmp_opt    253:4    0    2G  0 lvm  
+sdc                          8:32   0    2G  0 disk 
+sdd                          8:48   0    1G  0 disk 
+sde                          8:64   0    1G  0 disk 
+]0;root@lvm:/vagrant[root@lvm vagrant]# df -h
+Filesystem                          Size  Used Avail Use% Mounted on
+devtmpfs                            109M     0  109M   0% /dev
+tmpfs                               118M     0  118M   0% /dev/shm
+tmpfs                               118M  4.6M  113M   4% /run
+tmpfs                               118M     0  118M   0% /sys/fs/cgroup
+/dev/mapper/VolGroup00-LogVol00     8.0G  3.5G  4.6G  44% /
+/dev/mapper/VolGroup00-LogVol_Home  2.0G  6.1M  1.8G   1% /home
+/dev/sda2                          1014M   86M  929M   9% /boot
+/dev/mapper/vg_tmp_var-lv_tmp_var   2.9G  342M  2.4G  13% /var
+tmpfs                                24M     0   24M   0% /run/user/1000
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool create test_pool
+missing vdev specification
+usage:
+	create [-fnd] [-o property=value] ... 
+	    [-O file-system-property=value] ... 
+	    [-m mountpoint] [-R root] <pool> <vdev> ...
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool create test_pool  [K/dev/sdc
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool list
+NAME        SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
+test_pool  1.98G   272K  1.98G         -     0%     0%  1.00x  ONLINE  -
+]0;root@lvm:/vagrant[root@lvm vagrant]# mount /dev/vg_tmp_var/lv_tmp_opt /mnt
+]0;root@lvm:/vagrant[root@lvm vagrant]# mount /dev/vg_tmp_var/lv_tmp_opt /mnt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Czpool list[Kcreate test_pool /dev/sdc[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[Klsblk[1Pexitcp -ar /opt/* /mnt/[11Pll /opt/[K[K[K[K[K[K[K[Kll /opt/
+total 0
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file1
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file10
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file2
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file3
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file4
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file5
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file6
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file7
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file8
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file9
+]0;root@lvm:/vagrant[root@lvm vagrant]# ll /opt/mount /dev/vg_tmp_var/lv_tmp_opt /mnt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Czpool list[Kcreate test_pool /dev/sdc[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h[Klsblk[1Pexitcp -ar /opt/* /mnt/[11Pll /opt/cp -ar /opt/* /mnt/
+]0;root@lvm:/vagrant[root@lvm vagrant]# rm -f /opt/*
+]0;root@lvm:/vagrant[root@lvm vagrant]# rm -f /opt/*cp -ar /opt/* /mnt/[11Pll /opt/
+total 0
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs create /test_[K-poo[K[K[K[K_pool[1Ptest_pool[C[C[C[C[C[C[C[C[C/opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# afs [K[K[K[Kzfs list
+NAME            USED  AVAIL  REFER  MOUNTPOINT
+test_pool       110K  1.86G  25.5K  /test_pool
+test_pool/opt    24K  1.86G    24K  /test_pool/opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs set quota=500m test_pool/opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs list -o quota test_pool/opt
+QUOTA
+ 500M
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs set mountpoint=/opt test_pool/opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# df -h
+Filesystem                          Size  Used Avail Use% Mounted on
+devtmpfs                            109M     0  109M   0% /dev
+tmpfs                               118M     0  118M   0% /dev/shm
+tmpfs                               118M  4.6M  113M   4% /run
+tmpfs                               118M     0  118M   0% /sys/fs/cgroup
+/dev/mapper/VolGroup00-LogVol00     8.0G  3.5G  4.6G  44% /
+/dev/mapper/VolGroup00-LogVol_Home  2.0G  6.1M  1.8G   1% /home
+/dev/sda2                          1014M   86M  929M   9% /boot
+/dev/mapper/vg_tmp_var-lv_tmp_var   2.9G  342M  2.4G  13% /var
+tmpfs                                24M     0   24M   0% /run/user/1000
+test_pool                           1.9G     0  1.9G   0% /test_pool
+/dev/mapper/vg_tmp_var-lv_tmp_opt   2.0G  6.0M  1.8G   1% /mnt
+test_pool/opt                       500M  128K  500M   1% /opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# df -hzfs set mountpoint=/opt test_pool/opt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Plist -o quota[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@set quota=500m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[Kcreate test_pool/opt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pll /opt/rm -f /opt/*cp -ar /opt/* /mnt/[11Pll /opt/cp -ar /opt/* /mnt/[11Pll /opt/cp -ar /opt/* /mnt/[1P/mnt/[1P/mnt/[1Pmnt/[1P/mnt/[1P/mnt/[1P/mnt/[1Pmnt/[C[C[C[C[C [K* /opt/
+]0;root@lvm:/vagrant[root@lvm vagrant]# ll /opt/
+total 6
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file1
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file10
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file2
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file3
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file4
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file5
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file6
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file7
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file8
+-rw-r--r--. 1 root root 0 Oct  5 18:55 file9
+drwx------. 2 root root 2 Oct  5 19:05 [0m[01;34mlost+found[0m
+]0;root@lvm:/vagrant[root@lvm vagrant]# um[K[Klsblk
+NAME                       MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda                          8:0    0   40G  0 disk 
+├─sda1                       8:1    0    1M  0 part 
+├─sda2                       8:2    0    1G  0 part /boot
+└─sda3                       8:3    0   39G  0 part 
+  ├─VolGroup00-LogVol00    253:0    0    8G  0 lvm  /
+  ├─VolGroup00-LogVol01    253:1    0  1.5G  0 lvm  [SWAP]
+  └─VolGroup00-LogVol_Home 253:2    0    2G  0 lvm  /home
+sdb                          8:16   0   10G  0 disk 
+├─vg_tmp_var-lv_tmp_var    253:3    0    3G  0 lvm  /var
+└─vg_tmp_var-lv_tmp_opt    253:4    0    2G  0 lvm  /mnt
+sdc                          8:32   0    2G  0 disk 
+├─sdc1                       8:33   0    2G  0 part 
+└─sdc9                       8:41   0    8M  0 part 
+sdd                          8:48   0    1G  0 disk 
+sde                          8:64   0    1G  0 disk 
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool add test_pool log mirror /dev/sdd /dev/sde
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool list
+NAME        SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
+test_pool  1.98G   206K  1.98G         -     0%     0%  1.00x  ONLINE  -
+]0;root@lvm:/vagrant[root@lvm vagrant]# zpool status test_pool
+  pool: test_pool
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test_pool   ONLINE       0     0     0
+	  sdc       ONLINE       0     0     0
+	logs
+	  mirror-1  ONLINE       0     0     0
+	    sdd     ONLINE       0     0     0
+	    sde     ONLINE       0     0     0
+
+errors: No known data errors
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs snapshot test_pool/opt@22[K[K05-10-2019
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs list
+NAME            USED  AVAIL  REFER  MOUNTPOINT
+test_pool       136K  1.86G    24K  /test_pool
+test_pool/opt  32.5K   500M  32.5K  /opt
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs listsnapshot test_pool/opt@05-10-2019[K[K[K[K[K[K[K[K[K[Kfirst[K[K[K[K[Ksnapshot1
+]0;root@lvm:/vagrant[root@lvm vagrant]# zfs snapshot test_pool/opt@snapshot1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[K
+]0;root@lvm:/vagrant[root@lvm vagrant]# exit
+exit
+
+Script done on Sat 05 Oct 2019 07:26:56 PM UTC
