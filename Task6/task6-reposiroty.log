@@ -1,0 +1,385 @@
+Script started on Sat 12 Oct 2019 09:25:15 PM UTC
+]0;root@lvm:/vagrant[?1034h[root@lvm vagrant]# cd /var/www/html/
+]0;root@lvm:/var/www/html[root@lvm html]# ll
+total 0
+]0;root@lvm:/var/www/html[root@lvm html]# createrepo .
+bash: createrepo: command not found
+]0;root@lvm:/var/www/html[root@lvm html]# yum insta;[Kll createrepo
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * elrepo: mirrors.colocall.net
+ * epel: mirrors.colocall.net
+ * extras: centos-mirror.rbc.ru
+ * updates: mirror.awanti.com
+Resolving Dependencies
+--> Running transaction check
+---> Package createrepo.noarch 0:0.9.9-28.el7 will be installed
+--> Processing Dependency: python-deltarpm for package: createrepo-0.9.9-28.el7.noarch
+--> Running transaction check
+---> Package python-deltarpm.x86_64 0:3.6-3.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================
+ Package                                    Arch                              Version                                  Repository                       Size
+=============================================================================================================================================================
+Installing:
+ createrepo                                 noarch                            0.9.9-28.el7                             base                             94 k
+Installing for dependencies:
+ python-deltarpm                            x86_64                            3.6-3.el7                                base                             31 k
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 125 k
+Installed size: 348 k
+Is this ok [y/d/N]: y
+Downloading packages:
+(2/2): python-deltarpm-3.6-3.el7.x86_64.rpm                      0% [                                                      ]  0.0 B/s |    0 B  --:--:-- ETA (1/2): createrepo-0.9.9-28.el7.noarch.rpm                                                                                             |  94 kB  00:00:00     
+(2/2): python-deltarpm-3.6-3.el7.x86_64.rpm                     74% [========================================              ]  0.0 B/s |  94 kB  --:--:-- ETA (2/2): python-deltarpm-3.6-3.el7.x86_64.rpm                                                                                           |  31 kB  00:00:01     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                         67 kB/s | 125 kB  00:00:01     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+Warning: RPMDB altered outside of yum.
+  Installing : python-deltarpm-3.6-3.el7.x86_64 [                                                                                                      ] 1/2  Installing : python-deltarpm-3.6-3.el7.x86_64 [###############################################################################################       ] 1/2  Installing : python-deltarpm-3.6-3.el7.x86_64 [################################################################################################      ] 1/2  Installing : python-deltarpm-3.6-3.el7.x86_64 [###################################################################################################   ] 1/2  Installing : python-deltarpm-3.6-3.el7.x86_64 [####################################################################################################  ] 1/2  Installing : python-deltarpm-3.6-3.el7.x86_64                                                                                                          1/2 
+  Installing : createrepo-0.9.9-28.el7.noarch [                                                                                                        ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#                                                                                                       ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [##                                                                                                      ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#####################                                                                                   ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [####################################                                                                    ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#####################################                                                                   ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#######################################                                                                 ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#########################################                                                               ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [##########################################                                                              ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [############################################                                                            ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#############################################                                                           ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [################################################                                                        ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [##################################################                                                      ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [######################################################                                                  ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [########################################################                                                ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#########################################################                                               ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#############################################################                                           ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [##############################################################                                          ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#################################################################                                       ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [##################################################################                                      ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [########################################################################                                ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#################################################################################                       ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [###################################################################################################     ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [####################################################################################################    ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [#####################################################################################################   ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch [######################################################################################################  ] 2/2  Installing : createrepo-0.9.9-28.el7.noarch                                                                                                            2/2 
+  Verifying  : createrepo-0.9.9-28.el7.noarch                                                                                                            1/2 
+  Verifying  : python-deltarpm-3.6-3.el7.x86_64                                                                                                          2/2 
+
+Installed:
+  createrepo.noarch 0:0.9.9-28.el7                                                                                                                           
+
+Dependency Installed:
+  python-deltarpm.x86_64 0:3.6-3.el7                                                                                                                         
+
+Complete!
+]0;root@lvm:/var/www/html[root@lvm html]# yum install createrepo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcreaterepo .
+Saving Primary metadata
+Saving file lists metadata
+Saving other metadata
+Generating sqlite DBs
+Sqlite DBs complete
+]0;root@lvm:/var/www/html[root@lvm html]# ll
+total 4
+drwxr-xr-x. 2 root root 4096 Oct 12 21:27 [0m[01;34mrepodata[0m
+]0;root@lvm:/var/www/html[root@lvm html]# cd repodata/[1P repodata/[1P repodata/l repodata/l repodata/
+total 28
+-rw-r--r--. 1 root root  586 Oct 12 21:27 [0m[01;31m01a3b489a465bcac22a43492163df43451dc6ce47d27f66de289756b91635523-filelists.sqlite.bz2[0m
+-rw-r--r--. 1 root root  123 Oct 12 21:27 [01;31m401dc19bda88c82c403423fb835844d64345f7e95f5b9835888189c03834cc93-filelists.xml.gz[0m
+-rw-r--r--. 1 root root 1131 Oct 12 21:27 [01;31m5dc1e6e73c84803f059bb3065e684e56adfc289a7e398946574d79dac6643945-primary.sqlite.bz2[0m
+-rw-r--r--. 1 root root  123 Oct 12 21:27 [01;31m6bf9672d0862e8ef8b8ff05a2fd0208a922b1f5978e6589d87944c88259cb670-other.xml.gz[0m
+-rw-r--r--. 1 root root  575 Oct 12 21:27 [01;31m7c36572015e075add2b38b900837bcdbb8a504130ddff49b2351a7fc0affa3d4-other.sqlite.bz2[0m
+-rw-r--r--. 1 root root  134 Oct 12 21:27 [01;31mdabe2ce5481d23de1f4f52bdcfee0f9af98316c9e0de2ce8123adeefa0dd08b9-primary.xml.gz[0m
+-rw-r--r--. 1 root root 2962 Oct 12 21:27 repomd.xml
+]0;root@lvm:/var/www/html[root@lvm html]# cd[Kp /root/rpmbuild/RPMS/* .
+cp: omitting directory ‘/root/rpmbuild/RPMS/noarch’
+cp: omitting directory ‘/root/rpmbuild/RPMS/x86_64’
+]0;root@lvm:/var/www/html[root@lvm html]# cp /root/rpmbuild/RPMS/* .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@x[1@8[1@6[1P ._64/ .* .
+]0;root@lvm:/var/www/html[root@lvm html]# ll
+total 6880
+-rw-r--r--. 1 root root 2841536 Oct 12 21:35 [0m[01;31mhttpd-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root 3600348 Oct 12 21:35 [01;31mhttpd-debuginfo-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root  200508 Oct 12 21:35 [01;31mhttpd-devel-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   91744 Oct 12 21:35 [01;31mhttpd-tools-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   72328 Oct 12 21:35 [01;31mmod_ldap-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   50652 Oct 12 21:35 [01;31mmod_proxy_html-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   61256 Oct 12 21:35 [01;31mmod_session-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root  113896 Oct 12 21:35 [01;31mmod_ssl-2.4.6-90.el7.x86_64.rpm[0m
+drwxr-xr-x. 2 root root    4096 Oct 12 21:27 [01;34mrepodata[0m
+]0;root@lvm:/var/www/html[root@lvm html]# curl [3Pllcp /root/rpmbuild/RPMS/x86_64/* .* .[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pll repodata/[Kcreaterepo .yum install createrepo[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pcreaterepo .
+Spawning worker 0 with 8 pkgs
+Workers Finished
+Saving Primary metadata
+Saving file lists metadata
+Saving other metadata
+Generating sqlite DBs
+Sqlite DBs complete
+]0;root@lvm:/var/www/html[root@lvm html]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:c9:c7:04 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global noprefixroute dynamic eth0
+       valid_lft 64085sec preferred_lft 64085sec
+    inet6 fe80::5054:ff:fec9:c704/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:d5:3f:83 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.11.101/24 brd 192.168.11.255 scope global noprefixroute eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fed5:3f83/64 scope link 
+       valid_lft forever preferred_lft forever
+]0;root@lvm:/var/www/html[root@lvm html]# curl http://192.168.11.101
+curl: (7) Failed connect to 192.168.11.101:80; Connection refused
+]0;root@lvm:/var/www/html[root@lvm html]# netstat -ltupn
+bash: netstat: command not found
+]0;root@lvm:/var/www/html[root@lvm html]# yum install netstat[K[K[K[K[K[K[Knet-tools
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: centos-mirror.rbc.ru
+ * elrepo: ftp.nluug.nl
+ * epel: epel.besthosting.ua
+ * extras: centos-mirror.rbc.ru
+ * updates: mirror.awanti.com
+Resolving Dependencies
+--> Running transaction check
+---> Package net-tools.x86_64 0:2.0-0.25.20131004git.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================
+ Package                            Arch                            Version                                              Repository                     Size
+=============================================================================================================================================================
+Installing:
+ net-tools                          x86_64                          2.0-0.25.20131004git.el7                             base                          306 k
+
+Transaction Summary
+=============================================================================================================================================================
+Install  1 Package
+
+Total download size: 306 k
+Installed size: 917 k
+Is this ok [y/d/N]: y
+Downloading packages:
+net-tools-2.0-0.25.20131004git.el7.x86_64.rpm                                                                                         | 306 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [                                                                                             ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#####                                                                                        ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############                                                                                 ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##############                                                                               ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#####################                                                                        ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [###########################                                                                  ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############################                                                                 ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [###################################                                                          ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [####################################                                                         ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#######################################                                                      ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [########################################                                                     ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##########################################                                                   ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############################################                                                 ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##############################################                                               ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [###############################################                                              ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#####################################################                                        ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##########################################################                                   ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############################################################                                 ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##################################################################                           ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#######################################################################                      ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############################################################################                 ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [###############################################################################              ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#####################################################################################        ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [######################################################################################       ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#######################################################################################      ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [########################################################################################     ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [#########################################################################################    ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [##########################################################################################   ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [###########################################################################################  ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64 [############################################################################################ ] 1/1  Installing : net-tools-2.0-0.25.20131004git.el7.x86_64                                                                                                 1/1 
+  Verifying  : net-tools-2.0-0.25.20131004git.el7.x86_64                                                                                                 1/1 
+
+Installed:
+  net-tools.x86_64 0:2.0-0.25.20131004git.el7                                                                                                                
+
+Complete!
+]0;root@lvm:/var/www/html[root@lvm html]# yum install net-tools[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pnetstat -ltupn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1768/master         
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/systemd           
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1380/sshd           
+tcp6       0      0 ::1:25                  :::*                    LISTEN      1768/master         
+tcp6       0      0 :::111                  :::*                    LISTEN      1/systemd           
+tcp6       0      0 :::22                   :::*                    LISTEN      1380/sshd           
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           1/systemd           
+udp        0      0 0.0.0.0:715             0.0.0.0:*                           966/rpcbind         
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           968/chronyd         
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           2895/dhclient       
+udp6       0      0 :::111                  :::*                                1/systemd           
+udp6       0      0 :::715                  :::*                                966/rpcbind         
+udp6       0      0 ::1:323                 :::*                                968/chronyd         
+]0;root@lvm:/var/www/html[root@lvm html]# systemctl sts[Katus httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd(8)
+           man:apachectl(8)
+]0;root@lvm:/var/www/html[root@lvm html]# systemctl status httpd[1P httpd[1P httpd[1P httpdr httpdt httpd
+]0;root@lvm:/var/www/html[root@lvm html]# systemctl start httpd[1@tus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pnetstat -ltupn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1768/master         
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/systemd           
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1380/sshd           
+tcp6       0      0 ::1:25                  :::*                    LISTEN      1768/master         
+tcp6       0      0 :::111                  :::*                    LISTEN      1/systemd           
+tcp6       0      0 :::80                   :::*                    LISTEN      10598/httpd         
+tcp6       0      0 :::22                   :::*                    LISTEN      1380/sshd           
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           1/systemd           
+udp        0      0 0.0.0.0:715             0.0.0.0:*                           966/rpcbind         
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           968/chronyd         
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           2895/dhclient       
+udp6       0      0 :::111                  :::*                                1/systemd           
+udp6       0      0 :::715                  :::*                                966/rpcbind         
+udp6       0      0 ::1:323                 :::*                                968/chronyd         
+]0;root@lvm:/var/www/html[root@lvm html]# netstat -ltupnsystemctl start httpd[1@tus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pnetstat -ltupnyum install net-tools[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pnetstat -ltupncurl http://192.168.11.101
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Apache HTTP Server Test Page powered by CentOS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Bootstrap -->
+    <link href="/noindex/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="noindex/css/open-sans.css" type="text/css" />
+
+<style type="text/css"><!--		 
+
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 100;
+  color: #ccc;
+  background: rgba(10, 24, 55, 1);
+  font-size: 16px;
+}
+
+h2, h3, h4 {
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.jumbotron {
+  margin-bottom: 0;
+  color: #333;
+  background: rgb(212,212,221); /* Old browsers */
+  background: radial-gradient(ellipse at center top, rgba(255,255,255,1) 0%,rgba(174,174,183,1) 100%); /* W3C */
+}
+
+.jumbotron h1 {
+  font-size: 128px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0px 2px 0px #abc,
+               0px 4px 10px rgba(0,0,0,0.15),
+               0px 5px 2px rgba(0,0,0,0.1),
+               0px 6px 30px rgba(0,0,0,0.1);
+}
+
+.jumbotron p {
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.main {
+   background: white;
+   color: #234;
+   border-top: 1px solid rgba(0,0,0,0.12);
+   padding-top: 30px;
+   padding-bottom: 40px;
+}
+
+.footer {
+   border-top: 1px solid rgba(255,255,255,0.2);
+   padding-top: 30px;
+}
+
+    --></style>
+</head>
+<body>
+  <div class="jumbotron text-center">
+    <div class="container">
+   	  <h1>Testing 123..</h1>
+  		<p class="lead">This page is used to test the proper operation of the <a href="http://apache.org">Apache HTTP server</a> after it has been installed. If you can read this page it means that this site is working properly. This server is powered by <a href="http://centos.org">CentOS</a>.</p>
+		</div>
+  </div>
+  <div class="main">
+    <div class="container">
+       <div class="row">
+  			<div class="col-sm-6">
+    			<h2>Just visiting?</h2>
+			  		<p class="lead">The website you just visited is either experiencing problems or is undergoing routine maintenance.</p>
+  					<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name "webmaster" and directed to the website's domain should reach the appropriate person.</p>
+  					<p>For example, if you experienced problems while visiting www.example.com, you should send e-mail to "webmaster@example.com".</p>
+	  			</div>
+  				<div class="col-sm-6">
+	  				<h2>Are you the Administrator?</h2>
+		  			<p>You should add your website content to the directory <tt>/var/www/html/</tt>.</p>
+		  			<p>To prevent this page from ever being used, follow the instructions in the file <tt>/etc/httpd/conf.d/welcome.conf</tt>.</p>
+
+	  				<h2>Promoting Apache and CentOS</h2>
+			  		<p>You are free to use the images below on Apache and CentOS Linux powered HTTP servers.  Thanks for using Apache and CentOS!</p>
+				  	<p><a href="http://httpd.apache.org/"><img src="images/apache_pb.gif" alt="[ Powered by Apache ]"></a> <a href="http://www.centos.org/"><img src="images/poweredby.png" alt="[ Powered by CentOS Linux ]" height="31" width="88"></a></p>
+  				</div>
+	  		</div>
+	    </div>
+		</div>
+	</div>
+	  <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">          
+            <h2>Important note:</h2>
+            <p class="lead">The CentOS Project has nothing to do with this website or its content,
+            it just provides the software that makes the website run.</p>
+            
+            <p>If you have issues with the content of this site, contact the owner of the domain, not the CentOS project. 
+            Unless you intended to visit CentOS.org, the CentOS Project does not have anything to do with this website,
+            the content or the lack of it.</p>
+            <p>For example, if this website is www.example.com, you would find the owner of the example.com domain at the following WHOIS server:</p>
+            <p><a href="http://www.internic.net/whois.html">http://www.internic.net/whois.html</a></p>
+          </div>
+          <div class="col-sm-6">
+            <h2>The CentOS Project</h2>
+            <p>The CentOS Linux distribution is a stable, predictable, manageable and reproduceable platform derived from 
+               the sources of Red Hat Enterprise Linux (RHEL).<p>
+            
+            <p>Additionally to being a popular choice for web hosting, CentOS also provides a rich platform for open source communities to build upon. For more information
+               please visit the <a href="http://www.centos.org/">CentOS website</a>.</p>
+          </div>
+        </div>
+		  </div>
+    </div>
+  </div>
+</body></html>
+]0;root@lvm:/var/www/html[root@lvm html]# nano /etc/httpd/config/[K[K[K[K[K[K[K
+[?1049h[1;48r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                                         New Buffer                                                                                          [46;63H[ "/etc/httpd/" is a directory ][47d^G(B[m Get Help[47;27H(B[0;7m^O(B[m WriteOut[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[47;131H(B[0;7m^C(B[m Cur Pos[48d(B[0;7m^X(B[m Exit[48;27H(B[0;7m^J(B[m Justify[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[3d[46;54H(B[0;7m[ line 1/1 (100%), col 1/1 (100%), char 0/0 (0%) ][3d(B[m[47d[J[48;157H[48;1H[?1049l[?1l>]0;root@lvm:/var/www/html[root@lvm html]# cd /etc/httpd/
+]0;root@lvm:/etc/httpd[root@lvm httpd]# ll
+total 0
+drwxr-xr-x. 2 root root  37 Oct 12 21:03 [0m[01;34mconf[0m
+drwxr-xr-x. 2 root root  82 Oct 12 21:03 [01;34mconf.d[0m
+drwxr-xr-x. 2 root root 146 Oct 12 21:03 [01;34mconf.modules.d[0m
+lrwxrwxrwx. 1 root root  19 Oct 12 21:03 [01;36mlogs[0m -> [01;34m../../var/log/httpd[0m
+lrwxrwxrwx. 1 root root  29 Oct 12 21:03 [01;36mmodules[0m -> [01;34m../../usr/lib64/httpd/modules[0m
+lrwxrwxrwx. 1 root root  10 Oct 12 21:03 [01;36mrun[0m -> [01;34m/run/httpd[0m
+]0;root@lvm:/etc/httpd[root@lvm httpd]# cd conf
+]0;root@lvm:/etc/httpd/conf[root@lvm conf]# ll
+total 28
+-rw-r--r--. 1 root root 11753 Aug  6 13:44 httpd.conf
+-rw-r--r--. 1 root root 13077 Oct 12 20:53 magic
+]0;root@lvm:/etc/httpd/conf[root@lvm conf]# nano httpd.conf 
+[?1049h[1;48r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                                       File: httpd.conf                                                                                      [3;1H(B[m#[4d# This is the main Apache HTTP server configuration file.  It contains the[5d# configuration directives that give the server its instructions.[6d# See <URL:http://httpd.apache.org/docs/2.4/> for detailed information.[7d# In particular, see[8d# <URL:http://httpd.apache.org/docs/2.4/mod/directives.html>[9d# for a discussion of each configuration directive.[10d#[11d# Do NOT simply read the instructions in here without understanding[12d# what they do.  They're here only as hints or reminders.  If you are unsure[13d# consult the online docs. You have been warned.[14d#[15d# Configuration and logfile names: If the filenames you specify for many[16d# of the server's control files begin with "/" (or "drive:/" for Win32), the[17d# server will use that explicit path.  If the filenames do *not* begin[18d# with "/", the value of ServerRoot is prepended -- so 'log/access_log'[19d# with ServerRoot set to '/www' will be interpreted by the[20d# server as '/www/log/access_log', where as '/log/access_log' will be[21d# interpreted as '/log/access_log'.[23d#[24d# ServerRoot: The top of the directory tree under which the server's[25d# configuration, error, and log files are kept.[26d#[27d# Do not add a slash at the end of the directory path.  If you point[28d# ServerRoot at a non-local disk, be sure to specify a local disk on the[29d# Mutex directive, if file-based mutexes are used.  If you wish to share the[30d# same ServerRoot for multiple httpd daemons, you will need to change at[31d# least PidFile.[32d#[33dServerRoot "/etc/httpd"[35d#[36d# Listen: Allows you to bind Apache to specific IP addresses and/or[37d# ports, instead of the default. See also the <VirtualHost>[38d# directive.[39d#[40d# Change this to Listen on specific IP addresses as shown below to[41d# prevent Apache from glomming onto all bound IP addresses.[42d#[43d#Listen 12.34.56.78:80[44dListen 80[46;70H(B[0;7m[ Read 353 lines ][47d^G(B[m Get Help[47;27H(B[0;7m^O(B[m WriteOut[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[47;131H(B[0;7m^C(B[m Cur Pos[48d(B[0;7m^X(B[m Exit[48;27H(B[0;7m^J(B[m Justify[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[12d[13d[14d[15d[16d[17d[18d[19d[20d[21d[22d[23d[24d[25d[26d[27d[28d[46d[K[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1H#[25d# Dynamic Shared Object (DSO) Support[26d#[27d# To be able to use the functionality of a module which was built as a DSO you[28d# have to place corresponding `LoadModule' lines at this location so the[29d# directives contained in it are actually available _before_ they are used.[30d# Statically compiled modules (those listed by `httpd -l') do not need[31d# to be loaded here.[32d#[33d# Example:[34d# LoadModule foo_module modules/mod_foo.so[35d#[36dInclude conf.modules.d/*.conf[38d#[39d# If you wish httpd to run as a different user or group, you must run[40d# httpd as root initially and it will switch.[41d#[42d# User/Group: The name (or #number) of the user/group to run httpd as.[43d# It is usually good practice to create a dedicated user and group for[44d# running httpd, as with most system services.[45d#[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1HUser apache[25dGroup apache[27d# 'Main' server configuration[28d#[29d# The directives in this section set up the values used by the 'main'[30d# server, which responds to any requests that aren't handled by a[31d# <VirtualHost> definition.  These values also provide defaults for[32d# any <VirtualHost> containers you may define later in the file.[33d#[34d# All of these directives may appear inside <VirtualHost> containers,[35d# in which case these default settings will be overridden for the[36d# virtual host being defined.[37d#[39d#[40d# ServerAdmin: Your address, where problems with the server should be[41d# e-mailed.  This address appears on some server-generated pages, such[42d# as error documents.  e.g. admin@your-domain.com[43d#[44dServerAdmin root@localhost[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1H#[25d# ServerName gives the name and port that the server uses to identify itself.[26d# This can often be determined automatically, but we recommend you specify[27d# it explicitly to prevent problems during startup.[28d#[29d# If your host doesn't have a registered DNS name, enter its IP address here.[30d#[31d#ServerName www.example.com:80[33d#[34d# Deny access to the entirety of your server's filesystem. You must[35d# explicitly permit access to web content directories in other[36d# <Directory> blocks below.[37d#[38d<Directory />[39;5HAllowOverride none[40;5HRequire all denied[41d</Directory>[43d#[44d# Note that from this point forward you must specifically allow[45d# particular features to be enabled - so if something's not working as[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1H# you might expect, make sure that you have specifically enabled it[25d# below.[26d#[28d#[29d# DocumentRoot: The directory out of which you will serve your[30d# documents. By default, all requests are taken from this directory, but[31d# symbolic links and aliases may be used to point to other locations.[32d#[33dDocumentRoot "/var/www/html"[35d#[36d# Relax access to content within /var/www.[37d#[38d<Directory "/var/www">[39;5HAllowOverride None[40;5H# Allow open access:[41;5HRequire all granted[42d</Directory>[44d# Further relax access to the default document root:[45d<Directory "/var/www/html">[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;5H#[25d# Possible values for the Options directive are "None", "All",[26;5H# or any combination of:[27;5H#   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews[28;5H#[29d# Note that "MultiViews" must be named *explicitly* --- "Options All"[30;5H# doesn't give it to you.[31;5H#[32d# The Options directive is both complicated and important.  Please see[33;5H# http://httpd.apache.org/docs/2.4/mod/core.html#options[34;5H# for more information.[35;5H#[36dOptions Indexes FollowSymLinks[38;5H#[39d# AllowOverride controls what directives may be placed in .htaccess files.[40;5H# It can be "All", "None", or any combination of the keywords:[41;5H#   Options FileInfo AuthConfig Limit[42;5H#[43dAllowOverride None[45;5H#[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d[3d    # Possible values for the Options directive are "None", "All",[4d    # or any combination of:[5;5H#   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews[6d    #[7d    # Note that "MultiViews" must be named *explicitly* --- "Options All"[8d    # doesn't give it to you.[K[9d    #[K[10d    # The Options directive is both complicated and important.  Please see[11d    # http://httpd.apache.org/docs/2.4/mod/core.html#options[12;5H# for more information.[13d    #[14d    Options Indexes FollowSymLinks[K[15d[K[16d    #[K[17d# AllowOverride controls what directives may be placed in .htaccess files.[18;7HIt can be "All", "None", or any combination of the keywords:[19;5H#   Options FileInfo AuthConfig Limit[20d    #[K[21dAllowOverride None[22d[K[23d    #[K[24d Controls who can get stuff from this server.[25;7H[K[26dRequire all granted[K[27d</Directory>[K[28d[K[29d#[K[30d# DirectoryIndex: sets the file that Apache will serve if a directory[31d# is requested.[32d#[K[33d<IfModule dir_module>[K[34;5HDirectoryIndex index.html[35d</IfModule>[36d[K[37d#[38d# The following lines prevent .htaccess and .htpasswd files from being[39d# viewed by Web clients.[K[40d#[K[41d<Files ".ht*">[K[42;5HRequire all denied[43d</Files>[K[45d#[K[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1H# ErrorLog: The location of the error log file.[25d# If you do not specify an ErrorLog directive within a <VirtualHost>[26d# container, error messages relating to that virtual host will be[27d# logged here.  If you *do* define an error logfile for a <VirtualHost>[28d# container, that host's errors will be logged there and not here.[29d#[30dErrorLog "logs/error_log"[32d#[33d# LogLevel: Control the number of messages logged to the error_log.[34d# Possible values include: debug, info, notice, warn, error, crit,[35d# alert, emerg.[36d#[37dLogLevel warn[39d<IfModule log_config_module>[40;5H#[41d# The following directives define some format nicknames for use with[42;5H# a CustomLog directive (see below).[43;5H#[44dLogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined[45;5HLogFormat "%h %l %u %t \"%r\" %>s %b" common[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[2;46r8[46d[22S[1;48r[2;1H[K[25;5H<IfModule logio_module>[26;7H# You need to enable mod_logio.c to use %I and %O[27;7HLogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio[28;5H</IfModule>[30;5H#[31d# The location and format of the access logfile (Common Logfile Format).[32;5H# If you do not define any access logfiles within a <VirtualHost>[33;5H# container, they will be logged here.  Contrariwise, if you *do*[34;5H# define per-<VirtualHost> access logfiles, transactions will be[35;5H# logged therein and *not* in this file.[36;5H#[37d#CustomLog "logs/access_log" common[39;5H#[40d# If you prefer a logfile with access, agent, and referer information[41;5H# (Combined Logfile Format) you can use the following directive.[42;5H#[43dCustomLog "logs/access_log" combined[44d</IfModule>[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[2;46r[46;1H[22S[1;48r[24;1H<IfModule alias_module>[25;5H#[26d# Redirect: Allows you to tell clients about documents that used to[27;5H# exist in your server's namespace, but do not anymore. The client[28;5H# will make a new request for the document at its new location.[29;5H# Example:[30;5H# Redirect permanent /foo http://www.example.com/bar[32;5H#[33d# Alias: Maps web paths into filesystem paths and is used to[34;5H# access content that does not live under the DocumentRoot.[35;5H# Example:[36;5H# Alias /webpath /full/filesystem/path[37;5H#[38d# If you include a trailing / on /webpath then the server will[39;5H# require it to be present in the URL.  You will also likely[40;5H# need to provide a <Directory> section to allow access to[41;5H# the filesystem path.[43;5H#[44d# ScriptAlias: This controls which directories contain server scripts.[45;5H# ScriptAliases are essentially the same as Aliases, except that[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;5H# documents in the target directory are treated as applications and[25;5H# run by the server when requested rather than as documents sent to the[26;5H# client.  The same rules about trailing "/" apply to ScriptAlias[27;5H# directives as to Alias.[28;5H#[29dScriptAlias /cgi-bin/ "/var/www/cgi-bin/"[31d</IfModule>[33d#[34d# "/var/www/cgi-bin" should be changed to whatever your ScriptAliased[35d# CGI directory exists, if you have that configured.[36d#[37d<Directory "/var/www/cgi-bin">[38;5HAllowOverride None[39;5HOptions None[40;5HRequire all granted[41d</Directory>[43d<IfModule mime_module>[44;5H#[45d# TypesConfig points to the file containing the list of mappings from[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;5H# filename extension to MIME-type.[25;5H#[26dTypesConfig /etc/mime.types[28;5H#[29d# AddType allows you to add to or override the MIME configuration[30;5H# file specified in TypesConfig for specific file types.[31;5H#[32d#AddType application/x-gzip .tgz[33;5H#[34d# AddEncoding allows you to have certain browsers uncompress[35;5H# information on the fly. Note: Not all browsers support this.[36;5H#[37d#AddEncoding x-compress .Z[38;5H#AddEncoding x-gzip .gz .tgz[39;5H#[40d# If the AddEncoding directives above are commented-out, then you[41;5H# probably should define those extensions to indicate media types:[42;5H#[43dAddType application/x-compress .Z[44;5HAddType application/x-gzip .gz .tgz[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;5H#[25d# AddHandler allows you to map certain file extensions to "handlers":[26;5H# actions unrelated to filetype. These can be either built into the server[27;5H# or added with the Action directive (see below)[28;5H#[29d# To use CGI scripts outside of ScriptAliased directories:[30;5H# (You will also need to add "ExecCGI" to the "Options" directive.)[31;5H#[32d#AddHandler cgi-script .cgi[34;5H# For type maps (negotiated resources):[35;5H#AddHandler type-map var[37;5H#[38d# Filters allow you to process content before it is sent to the client.[39;5H#[40d# To parse .shtml files for server-side includes (SSI):[41;5H# (You will also need to add "Includes" to the "Options" directive.)[42;5H#[43dAddType text/html .shtml[44;5HAddOutputFilter INCLUDES .shtml[45d</IfModule>[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[2;46r8[46d[22S[1;48r[2;1H[K[25d#[26d# Specify a default charset for all content served; this enables[27d# interpretation of all content as UTF-8 by default.  To use the[28d# default browser choice (ISO-8859-1), or to allow the META tags[29d# in HTML content to override this choice, comment out this[30d# directive:[31d#[32dAddDefaultCharset UTF-8[34d<IfModule mime_magic_module>[35;5H#[36d# The mod_mime_magic module allows the server to use various hints from the[37;5H# contents of the file itself to determine its type.  The MIMEMagicFile[38;5H# directive tells the module where the hint definitions are located.[39;5H#[40dMIMEMagicFile conf/magic[41d</IfModule>[43d#[44d# Customizable error responses come in three flavors:[45d# 1) plain text 2) local redirects 3) external redirects[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[2;46r8[46d[22S[1;48r[24;1H#[25d# Some examples:[26d#ErrorDocument 500 "The server made a boo boo."[27d#ErrorDocument 404 /missing.html[28d#ErrorDocument 404 "/cgi-bin/missing_handler.pl"[29d#ErrorDocument 402 http://www.example.com/subscription_info.html[30d#[32d#[33d# EnableMMAP and EnableSendfile: On systems that support it,[34d# memory-mapping or the sendfile syscall may be used to deliver[35d# files.  This usually improves server performance, but must[36d# be turned off when serving from networked-mounted[37d# filesystems or if support for these functions is otherwise[38d# broken on your system.[39d# Defaults if commented: EnableMMAP On, EnableSendfile Off[40d#[41d#EnableMMAP off[42dEnableSendfile on[44d# Supplemental configuration[45d#[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;1H# Load config files in the "/etc/httpd/conf.d" directory, if any.[25dIncludeOptional conf.d/*.conf[A[25d[26d[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;1H#[4d# Specify a default charset for all content served; this enables[5d# interpretation of all content as UTF-8 by default.  To use the[6d# default browser choice (ISO-8859-1), or to allow the META tags[7d# in HTML content to override this choice, comment out this[8d# directive:[9d#[10dAddDefaultCharset UTF-8[12d<IfModule mime_magic_module>[13;5H#[14d# The mod_mime_magic module allows the server to use various hints from the[15;5H# contents of the file itself to determine its type.  The MIMEMagicFile[16;5H# directive tells the module where the hint definitions are located.[17;5H#[18dMIMEMagicFile conf/magic[19d</IfModule>[21d#[22d# Customizable error responses come in three flavors:[23d# 1) plain text 2) local redirects 3) external redirects[24d#[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H# AddHandler allows you to map certain file extensions to "handlers":[4;5H# actions unrelated to filetype. These can be either built into the server[5;5H# or added with the Action directive (see below)[6;5H#[7d# To use CGI scripts outside of ScriptAliased directories:[8;5H# (You will also need to add "ExecCGI" to the "Options" directive.)[9;5H#[10d#AddHandler cgi-script .cgi[12;5H# For type maps (negotiated resources):[13;5H#AddHandler type-map var[15;5H#[16d# Filters allow you to process content before it is sent to the client.[17;5H#[18d# To parse .shtml files for server-side includes (SSI):[19;5H# (You will also need to add "Includes" to the "Options" directive.)[20;5H#[21dAddType text/html .shtml[22;5HAddOutputFilter INCLUDES .shtml[23d</IfModule>[24d[A[A[A[A[A[A[A[A[A[A[A[11d[A[A[A[A[A[A[A[A[2;46r[2;1H[22T[1;48r[3;5H#[4dTypesConfig /etc/mime.types[6;5H#[7d# AddType allows you to add to or override the MIME configuration[8;5H# file specified in TypesConfig for specific file types.[9;5H#[10d#AddType application/x-gzip .tgz[11;5H#[12d# AddEncoding allows you to have certain browsers uncompress[13;5H# information on the fly. Note: Not all browsers support this.[14;5H#[15d#AddEncoding x-compress .Z[16;5H#AddEncoding x-gzip .gz .tgz[17;5H#[18d# If the AddEncoding directives above are commented-out, then you[19;5H# probably should define those extensions to indicate media types:[20;5H#[21dAddType application/x-compress .Z[22;5HAddType application/x-gzip .gz .tgz[24;5H#[A[A[A[A[A[A[A[A[A[13d[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H# run by the server when requested rather than as documents sent to the[4;5H# client.  The same rules about trailing "/" apply to ScriptAlias[5;5H# directives as to Alias.[6;5H#[7dScriptAlias /cgi-bin/ "/var/www/cgi-bin/"[9d</IfModule>[11d#[12d# "/var/www/cgi-bin" should be changed to whatever your ScriptAliased[13d# CGI directory exists, if you have that configured.[14d#[15d<Directory "/var/www/cgi-bin">[16;5HAllowOverride None[17;5HOptions None[18;5HRequire all granted[19d</Directory>[21d<IfModule mime_module>[22;5H#[23d# TypesConfig points to the file containing the list of mappings from[24;5H# filename extension to MIME-type.[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H#[4d# Redirect: Allows you to tell clients about documents that used to[5;5H# exist in your server's namespace, but do not anymore. The client[6;5H# will make a new request for the document at its new location.[7;5H# Example:[8;5H# Redirect permanent /foo http://www.example.com/bar[10;5H#[11d# Alias: Maps web paths into filesystem paths and is used to[12;5H# access content that does not live under the DocumentRoot.[13;5H# Example:[14;5H# Alias /webpath /full/filesystem/path[15;5H#[16d# If you include a trailing / on /webpath then the server will[17;5H# require it to be present in the URL.  You will also likely[18;5H# need to provide a <Directory> section to allow access to[19;5H# the filesystem path.[21;5H#[22d# ScriptAlias: This controls which directories contain server scripts.[23;5H# ScriptAliases are essentially the same as Aliases, except that[24;5H# documents in the target directory are treated as applications and[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H<IfModule logio_module>[4;7H# You need to enable mod_logio.c to use %I and %O[5;7HLogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio[6;5H</IfModule>[8;5H#[9d# The location and format of the access logfile (Common Logfile Format).[10;5H# If you do not define any access logfiles within a <VirtualHost>[11;5H# container, they will be logged here.  Contrariwise, if you *do*[12;5H# define per-<VirtualHost> access logfiles, transactions will be[13;5H# logged therein and *not* in this file.[14;5H#[15d#CustomLog "logs/access_log" common[17;5H#[18d# If you prefer a logfile with access, agent, and referer information[19;5H# (Combined Logfile Format) you can use the following directive.[20;5H#[21dCustomLog "logs/access_log" combined[22d</IfModule>[24d<IfModule alias_module>[A[A[A[A[A[20d[21d[22d[23d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d7[3;46r8[46d[22S[1;48r[24;5H# documents in the target directory are treated as applications and[25;5H# run by the server when requested rather than as documents sent to the[26;5H# client.  The same rules about trailing "/" apply to ScriptAlias[27;5H# directives as to Alias.[28;5H#[29dScriptAlias /cgi-bin/ "/var/www/cgi-bin/"[31d</IfModule>[33d#[34d# "/var/www/cgi-bin" should be changed to whatever your ScriptAliased[35d# CGI directory exists, if you have that configured.[36d#[37d<Directory "/var/www/cgi-bin">[38;5HAllowOverride None[39;5HOptions None[40;5HRequire all granted[41d</Directory>[43d<IfModule mime_module>[44;5H#[45d# TypesConfig points to the file containing the list of mappings from[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H<IfModule logio_module>[4;7H# You need to enable mod_logio.c to use %I and %O[5;7HLogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio[6;5H</IfModule>[8;5H#[9d# The location and format of the access logfile (Common Logfile Format).[10;5H# If you do not define any access logfiles within a <VirtualHost>[11;5H# container, they will be logged here.  Contrariwise, if you *do*[12;5H# define per-<VirtualHost> access logfiles, transactions will be[13;5H# logged therein and *not* in this file.[14;5H#[15d#CustomLog "logs/access_log" common[17;5H#[18d# If you prefer a logfile with access, agent, and referer information[19;5H# (Combined Logfile Format) you can use the following directive.[20;5H#[21dCustomLog "logs/access_log" combined[22d</IfModule>[24d<IfModule alias_module>[A[A[A[A[18d[A[A[A[13d[A[A[A[8d[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;1H# If you do not specify an ErrorLog directive within a <VirtualHost>[4d# container, error messages relating to that virtual host will be[5d# logged here.  If you *do* define an error logfile for a <VirtualHost>[6d# container, that host's errors will be logged there and not here.[7d#[8dErrorLog "logs/error_log"[10d#[11d# LogLevel: Control the number of messages logged to the error_log.[12d# Possible values include: debug, info, notice, warn, error, crit,[13d# alert, emerg.[14d#[15dLogLevel warn[17d<IfModule log_config_module>[18;5H#[19d# The following directives define some format nicknames for use with[20;5H# a CustomLog directive (see below).[21;5H#[22dLogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined[23;5HLogFormat "%h %l %u %t \"%r\" %>s %b" common[24d[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;46r[2;1H[22T[1;48r[3;5H#[4dRequire all granted[5d</Directory>[7d#[8d# DirectoryIndex: sets the file that Apache will serve if a directory[9d# is requested.[10d#[11d<IfModule dir_module>[12;5HDirectoryIndex index.html[13d</IfModule>[15d#[16d# The following lines prevent .htaccess and .htpasswd files from being[17d# viewed by Web clients.[18d#[19d<Files ".ht*">[20;5HRequire all denied[21d</Files>[23d#[24d# ErrorLog: The location of the error log file.[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[2;45r[2;1H[22T[1;48r[3;5H# Possible values for the Options directive are "None", "All",[4;5H# or any combination of:[5;5H#   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews[6;5H#[7d# Note that "MultiViews" must be named *explicitly* --- "Options All"[8;5H# doesn't give it to you.[9;5H#[10d# The Options directive is both complicated and important.  Please see[11;5H# http://httpd.apache.org/docs/2.4/mod/core.html#options[12;5H# for more information.[13;5H#[14dOptions Indexes FollowSymLinks[16;5H#[17d# AllowOverride controls what directives may be placed in .htaccess files.[18;5H# It can be "All", "None", or any combination of the keywords:[19;5H#   Options FileInfo AuthConfig Limit[20;5H#[21dAllowOverride None[23;5H#[24d# Controls who can get stuff from this server.[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[13;27r[27;1H[7S[1;48r[3;45r[3;1H[22T[1;48r[3;1H# below.[4d#[6d#[7d# DocumentRoot: The directory out of which you will serve your[8d# documents. By default, all requests are taken from this directory, but[9d# symbolic links and aliases may be used to point to other locations.[10d#[11dDocumentRoot "/var/www/html"[13d#[14d# Relax access to content within /var/www.[15d#[16d<Directory "/var/www">[17;5HAllowOverride None[18;5H# Allow open access:[19;5HRequire all granted[20d</Directory>[22d# Further relax access to the default document root:[23d<Directory "/var/www/html">[24;5H#[36dOptions Indexes FollowSymLinks[39;7HAllowOverride controls what directives may be placed in .htaccess files.[40;7HIt can be "All", "None", or any combination of the keywords:[41;5H#   Options FileInfo AuthConfig Limit[42d    #[K[43dAllowOverride None[45;5H#[24d[A[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d[35d[36d[37d[38d[39d[40d[41d[42d[43d[44d[45d[3d    # Possible values for the Options directive are "None", "All",[4d    # or any combination of:[5;5H#   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews[6d    #[7d    # Note that "MultiViews" must be named *explicitly* --- "Options All"[8d    # doesn't give it to you.[K[9d    #[K[10d    # The Options directive is both complicated and important.  Please see[11d    # http://httpd.apache.org/docs/2.4/mod/core.html#options[12;5H# for more information.[13d    #[14d    Options Indexes FollowSymLinks[K[15d[K[16d    #[K[17d# AllowOverride controls what directives may be placed in .htaccess files.[18;7HIt can be "All", "None", or any combination of the keywords:[19;5H#   Options FileInfo AuthConfig Limit[20d    #[K[21dAllowOverride None[22d[K[23d    #[K[24d Controls who can get stuff from this server.[25;7H[K[26dRequire all granted[K[27d</Directory>[K[28d[K[29d#[K[30d# DirectoryIndex: sets the file that Apache will serve if a directory[31d# is requested.[32d#[K[33d<IfModule dir_module>[K[34;5HDirectoryIndex index.html[35d</IfModule>[36d[K[37d#[38d# The following lines prevent .htaccess and .htpasswd files from being[39d# viewed by Web clients.[K[40d#[K[41d<Files ".ht*">[K[42;5HRequire all denied[43d</Files>[K[45d#[K[24d[25d[26d[27d[28d[29d[30d[31d[32d[33d[34d7[34;45r8M[1;48r[1;148H(B[0;7mModified[34;5H(B[m<IfModule mod_autoindex.c>[35d[23;46r[46;1H[11S[1;48r[3;7H[K[4dRequire all granted[K[5d</Directory>[K[6d[K[7d#[K[8d# DirectoryIndex: sets the file that Apache will serve if a directory[9d# is requested.[10d#[K[11d<IfModule dir_module>[K[12;5H<IfModule mod_autoindex.c>[13d[K[14;5H    IndexOptions Charset=UTF-8[15;9HIndexOptions NameWidth=*[16;5H    IndexOptions FancyIndexing[17;5H    IndexOptions SuppressHTMLPreamble[K[18;5H    IndexOptions HTMLTable[K[19;5H    IndexOptions IgnoreCase[K[20;5H    IndexOptions XHTML[21;5H    IndexOptions IconsAreLinks[22;9HIndexOptions FoldersFirst[23;5H    IndexOptions SuppressDescription[24d        IndexOptions VersionSort    DirectoryIndex index.html[35d#[36d# ErrorLog: The location of the error log file.[37d# If you do not specify an ErrorLog directive within a <VirtualHost>[38d# container, error messages relating to that virtual host will be[39d# logged here.  If you *do* define an error logfile for a <VirtualHost>[40d# container, that host's errors will be logged there and not here.[41d#[42dErrorLog "logs/error_log"[44d#[45d# LogLevel: Control the number of messages logged to the error_log.[24;33H[A[A[A[20;27H[19;32H[A[A	[A[A[A[A[12;31H[Z[Z[Adule[12d[A[12d[A>[12d[13d[14;22H[15d[16d[17d[18d[19d[20d[21d[22d[23d[24dVe	sionSor	    [Z7[25;45r8[25dM[1;48r[24;37H[K[25;5HDirectoryIndex index.html7[25;45r8M[1;48r[26;1H[27d[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[46;68H(B[0;7m[ Cut to end enabled ][11d(B[m<IfModu	e dir_m	dule>[12d[46d[K[12;18H[Z	[11;22H[A#[11;22H[K[12d[13d[14d[15d[16d[17d[18d[19d[20d[21d[22d[23d[24d[25d<IfModule dir_module>[Z	7[25;46r8M[1;48r[26;1H[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[12d[1P[1P[1P[1P[13d[14d[15d[16d[17d[18d[19d[20d[21d[22d[23d[24d[25d</IfModule>7[26;45r8[26dM[1;48r[26;1H[46d(B[0;7mFile Name to Write: httpd.conf                                                                                                                               [47;27H(B[m             (B[0;7mM-D(B[m DOS Format           [47;79H(B[0;7mM-A(B[m Append  [47;105H             (B[0;7mM-B(B[m Backup File[K[48;2H(B[0;7mC(B[m Cancel[48;27H             (B[0;7mM-M(B[m Mac Format          [48;79H(B[0;7mM-P(B[m Prepend[K[46;31H[1;148H[39;49m(B[0;7m        [46;69H(B[m[1K (B[0;7m[ Wrote 369 lines ](B[m[K[47;27H(B[0;7m^O(B[m WriteOut[15X[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[15X[47;131H(B[0;7m^C(B[m Cur Pos[48;2H(B[0;7mX(B[m Exit  [48;27H(B[0;7m^J(B[m Justify[16X[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[26d[47d[J[48;157H[48;1H[?1049l[?1l>]0;root@lvm:/etc/httpd/conf[root@lvm conf]# nano httpd.conf ll[Kcd confll[Kcd /etc/httpd/[2@nano[C[C[C[C[C[C[C[C[C[C[C[Ccurl http://192.168.11.101[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pnetstat -ltupnsystemctl start httpd[1@tus[C[C[C[C[C[C[1Prt[C[C[C[C[C[C[1@r[1@e
+]0;root@lvm:/etc/httpd/conf[root@lvm conf]# systemctl restart httpd
+]0;root@lvm:/etc/httpd/conf.d[?1034h[root@lvm conf.d]# cd /var/www/html/
+]0;root@lvm:/var/www/html[root@lvm html]# ll
+total 6880
+-rw-r--r--. 1 root root 2841536 Oct 12 21:35 [0m[01;31mhttpd-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root 3600348 Oct 12 21:35 [01;31mhttpd-debuginfo-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root  200508 Oct 12 21:35 [01;31mhttpd-devel-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   91744 Oct 12 21:35 [01;31mhttpd-tools-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   72328 Oct 12 21:35 [01;31mmod_ldap-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   50652 Oct 12 21:35 [01;31mmod_proxy_html-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root   61256 Oct 12 21:35 [01;31mmod_session-2.4.6-90.el7.x86_64.rpm[0m
+-rw-r--r--. 1 root root  113896 Oct 12 21:35 [01;31mmod_ssl-2.4.6-90.el7.x86_64.rpm[0m
+drwxr-xr-x. 2 root root    4096 Oct 12 21:35 [01;34mrepodata[0m
+]0;root@lvm:/var/www/html[root@lvm html]# llcd /var/www/html/exit[Kcurl http://192.168.11.101[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Psystemctl restart httpd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccurl http://192.168.11.101
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Index of /</title>
+ </head>
+ <body>
+<h1>Index of /</h1>
+  <table>
+   <tr><th valign="top"><img src="/icons/blank.gif" alt="[ICO]" /></th><th><a href="?C=N;O=D">Name</a></th><th><a href="?C=M;O=A">Last modified</a></th><th><a href="?C=S;O=A">Size</a></th></tr>
+   <tr><th colspan="4"><hr /></th></tr>
+<tr><td valign="top"><a href="repodata/"><img src="/icons/folder.gif" alt="[DIR]" /></a></td><td><a href="repodata/">repodata/</a></td><td align="right">2019-10-12 21:35  </td><td align="right">  - </td></tr>
+<tr><td valign="top"><a href="httpd-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="httpd-2.4.6-90.el7.x86_64.rpm">httpd-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right">2.7M</td></tr>
+<tr><td valign="top"><a href="httpd-debuginfo-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="httpd-debuginfo-2.4.6-90.el7.x86_64.rpm">httpd-debuginfo-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right">3.4M</td></tr>
+<tr><td valign="top"><a href="httpd-devel-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="httpd-devel-2.4.6-90.el7.x86_64.rpm">httpd-devel-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right">196K</td></tr>
+<tr><td valign="top"><a href="httpd-tools-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="httpd-tools-2.4.6-90.el7.x86_64.rpm">httpd-tools-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right"> 90K</td></tr>
+<tr><td valign="top"><a href="mod_ldap-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="mod_ldap-2.4.6-90.el7.x86_64.rpm">mod_ldap-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right"> 71K</td></tr>
+<tr><td valign="top"><a href="mod_proxy_html-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="mod_proxy_html-2.4.6-90.el7.x86_64.rpm">mod_proxy_html-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right"> 49K</td></tr>
+<tr><td valign="top"><a href="mod_session-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="mod_session-2.4.6-90.el7.x86_64.rpm">mod_session-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right"> 60K</td></tr>
+<tr><td valign="top"><a href="mod_ssl-2.4.6-90.el7.x86_64.rpm"><img src="/icons/unknown.gif" alt="[   ]" /></a></td><td><a href="mod_ssl-2.4.6-90.el7.x86_64.rpm">mod_ssl-2.4.6-90.el7.x86_64.rpm</a></td><td align="right">2019-10-12 21:35  </td><td align="right">111K</td></tr>
+   <tr><th colspan="4"><hr /></th></tr>
+</table>
+</body></html>
+]0;root@lvm:/var/www/html[root@lvm html]# exit
+exit
+
+Script done on Sat 12 Oct 2019 10:28:38 PM UTC
