@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.box_check_update = false
-#####################VM-Task2#########################################
+#####################VM-Task6#########################################
   config.vm.define "task6" do |task6|
       task6.vm.network  "public_network", ip: "192.168.11.106"
       task6.vm.hostname = "task6"  
