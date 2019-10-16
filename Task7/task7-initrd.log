@@ -1,0 +1,198 @@
+Script started on Thu 17 Oct 2019 12:07:59 AM MSK
+]0;root@localhost:/home/afanasov[?1034h[root@localhost afanasov]# cd 􀀓􀁙􀁗􀁖􀀓􀁐􀁍􀁆􀀓􀁈􀁖􀁅􀁇􀁙􀁘􀀓􀁑􀁓􀁈􀁙􀁐􀁉􀁗􀀒􀁈􀀓[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/usr/lib/dracut/ini[K[K[Kmodules.d/
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# ll
+total 12
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [0m[01;34m00bash[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m00systemd-bootchart[0m
+drwxr-xr-x. 2 root root   57 Sep 19 16:04 [01;34m03modsign[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m03rescue[0m
+drwxr-xr-x. 2 root root   72 Sep 19 16:04 [01;34m04watchdog[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m05busybox[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:03 [01;34m05nss-softokn[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:07 [01;34m05rdma[0m
+drwxr-xr-x. 2 root root  111 Sep 19 16:04 [01;34m10i18n[0m
+drwxr-xr-x. 2 root root   72 Sep 19 16:04 [01;34m30convertfs[0m
+drwxr-xr-x. 2 root root 4096 Sep 19 16:05 [01;34m40network[0m
+drwxr-xr-x. 2 root root   51 Sep 19 16:05 [01;34m45ifcfg[0m
+drwxr-xr-x. 2 root root   47 Sep 19 16:04 [01;34m45url-lib[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m50drm[0m
+drwxr-xr-x. 2 root root  150 Sep 19 16:04 [01;34m50plymouth[0m
+drwxr-xr-x. 2 root root   92 Sep 19 16:04 [01;34m80cms[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m90bcache[0m
+drwxr-xr-x. 2 root root  129 Sep 19 16:04 [01;34m90btrfs[0m
+drwxr-xr-x. 2 root root  195 Sep 19 16:04 [01;34m90crypt[0m
+drwxr-xr-x. 2 root root  130 Sep 19 16:04 [01;34m90dm[0m
+drwxr-xr-x. 2 root root   93 Sep 19 16:04 [01;34m90dmraid[0m
+drwxr-xr-x. 2 root root  258 Sep 19 16:04 [01;34m90dmsquash-live[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m90dmsquash-live-ntfs[0m
+drwxr-xr-x. 2 root root   73 Sep 19 16:04 [01;34m90kernel-modules[0m
+drwxr-xr-x. 2 root root  102 Sep 19 16:05 [01;34m90livenet[0m
+drwxr-xr-x. 2 root root   88 Sep 19 16:04 [01;34m90lvm[0m
+drwxr-xr-x. 2 root root 4096 Sep 19 16:04 [01;34m90mdraid[0m
+drwxr-xr-x. 2 root root  110 Sep 19 16:04 [01;34m90multipath[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m90qemu[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:05 [01;34m90qemu-net[0m
+drwxr-xr-x. 2 root root   53 Sep 19 16:04 [01;34m91crypt-gpg[0m
+drwxr-xr-x. 2 root root   54 Sep 19 16:04 [01;34m91crypt-loop[0m
+drwxr-xr-x. 2 root root   92 Sep 19 16:05 [01;34m95cifs[0m
+drwxr-xr-x. 2 root root   50 Sep 19 16:04 [01;34m95dasd[0m
+drwxr-xr-x. 2 root root   54 Sep 19 16:04 [01;34m95dasd_mod[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m95debug[0m
+drwxr-xr-x. 2 root root  151 Sep 19 16:05 [01;34m95fcoe[0m
+drwxr-xr-x. 2 root root   54 Sep 19 16:05 [01;34m95fcoe-uefi[0m
+drwxr-xr-x. 2 root root   49 Sep 19 16:04 [01;34m95fstab-sys[0m
+drwxr-xr-x. 2 root root  119 Sep 19 16:05 [01;34m95iscsi[0m
+drwxr-xr-x. 2 root root   71 Sep 19 16:05 [01;34m95nbd[0m
+drwxr-xr-x. 2 root root  139 Sep 19 16:05 [01;34m95nfs[0m
+drwxr-xr-x. 2 root root   69 Sep 19 16:04 [01;34m95resume[0m
+drwxr-xr-x. 2 root root  120 Sep 19 16:04 [01;34m95rootfs-block[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:05 [01;34m95ssh-client[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:04 [01;34m95terminfo[0m
+drwxr-xr-x. 2 root root  122 Sep 19 16:04 [01;34m95udev-rules[0m
+drwxr-xr-x. 2 root root  102 Sep 19 16:04 [01;34m95virtfs[0m
+drwxr-xr-x. 2 root root   50 Sep 19 16:04 [01;34m95zfcp[0m
+drwxr-xr-x. 2 root root   49 Sep 19 16:05 [01;34m95znet[0m
+drwxr-xr-x. 2 root root   57 Sep 19 16:04 [01;34m97biosdevname[0m
+drwxr-xr-x. 2 root root   68 Sep 19 16:04 [01;34m98ecryptfs[0m
+drwxr-xr-x. 2 root root   49 Sep 19 16:04 [01;34m98pollcdrom[0m
+drwxr-xr-x. 2 root root   58 Sep 19 16:04 [01;34m98selinux[0m
+drwxr-xr-x. 2 root root  191 Sep 19 16:04 [01;34m98syslog[0m
+drwxr-xr-x. 2 root root 4096 Sep 19 16:04 [01;34m98systemd[0m
+drwxr-xr-x. 2 root root   49 Sep 19 16:04 [01;34m98usrmount[0m
+drwxr-xr-x. 2 root root  173 Sep 19 16:04 [01;34m99base[0m
+drwxr-xr-x. 2 root root   46 Sep 19 16:04 [01;34m99fs-lib[0m
+drwxr-xr-x. 2 root root   47 Sep 19 16:04 [01;34m99img-lib[0m
+drwxr-xr-x. 2 root root  227 Sep 19 16:06 [01;34m99kdumpbase[0m
+drwxr-xr-x. 2 root root   29 Sep 19 16:07 [01;34m99microcode_ctl-fw_dir_override[0m
+drwxr-xr-x. 2 root root   48 Sep 19 16:04 [01;34m99shutdown[0m
+drwxr-xr-x. 2 root root   48 Sep 19 16:05 [01;34m99uefi-lib[0m
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# mkdir o1test[K[K[K[K[K[K01test
+]0;root@localhost:/usr/lib/dracut/modules.d[root@localhost modules.d]# cd o1[K[K01test/
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# nano module-setuo[Kp.sh
+[?1049h[1;48r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                                      File: module-setup.sh                                                                                  [46;73H[ New File ][47d^G(B[m Get Help[47;27H(B[0;7m^O(B[m WriteOut[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[47;131H(B[0;7m^C(B[m Cur Pos[48d(B[0;7m^X(B[m Exit[48;27H(B[0;7m^J(B[m Justify[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[3d[1;148H(B[0;7mModified[3d(B[m#!/bin/bash[5dcheck() {[6;5Hreturn 0[7d}[9ddepends() {[10;5Hreturn 0[11d}[13dinstall() {[14;5Hinst_hook cleanup 00 "${moddir}/test.sh"[15d}[46d[K[15d}[46d(B[0;7mFile Name to Write: module-setup.sh                                                                                                                          [47;27H(B[m             (B[0;7mM-D(B[m DOS Format           [47;79H(B[0;7mM-A(B[m Append  [47;105H             (B[0;7mM-B(B[m Backup File[K[48;2H(B[0;7mC(B[m Cancel[48;27H             (B[0;7mM-M(B[m Mac Format          [48;79H(B[0;7mM-P(B[m Prepend[K[46;36H[1;148H[39;49m(B[0;7m        [46;69H(B[m[1K (B[0;7m[ Wrote 13 lines ](B[m[K[47;27H(B[0;7m^O(B[m WriteOut[15X[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[15X[47;131H(B[0;7m^C(B[m Cur Pos[48;2H(B[0;7mX(B[m Exit  [48;27H(B[0;7m^J(B[m Justify[16X[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[15d}[47d[J[48;157H[48;1H[?1049l[?1l>]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# cat module-setup.sh 
+#!/bin/bash
+
+check() {
+    return 0
+}
+
+depends() {
+    return 0
+}
+
+install() {
+    inst_hook cleanup 00 "${moddir}/test.sh"
+}
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# nano test.sh
+[?1049h[1;48r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                                        File: test.sh                                                                                        [46;73H[ New File ][47d^G(B[m Get Help[47;27H(B[0;7m^O(B[m WriteOut[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[47;131H(B[0;7m^C(B[m Cur Pos[48d(B[0;7m^X(B[m Exit[48;27H(B[0;7m^J(B[m Justify[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[3d[1;148H(B[0;7mModified[3d(B[m#!/bin/bash[5dexec 0<>/dev/console 1<>/dev/console 2<>/dev/console[6dcat <<'msgend'[7dHello! You are in dracut module![8d ___________________[9d< I'm dracut module >[10d -------------------[11;4H\[12d\[13d	.--.[14;8H|o_o |[46d[K[15d[8G|:_/ |[16;7H//   \ \[17;6H(|     | )[18;5H/'\_   _/`\[19;5H\___)=(___/[20dmsgend[21dsleep 10[22decho " continuing...."[46d(B[0;7mFile Name to Write: test.sh                                                                                                                                  [47;27H(B[m             (B[0;7mM-D(B[m DOS Format           [47;79H(B[0;7mM-A(B[m Append  [47;105H             (B[0;7mM-B(B[m Backup File[K[48;2H(B[0;7mC(B[m Cancel[48;27H             (B[0;7mM-M(B[m Mac Format          [48;79H(B[0;7mM-P(B[m Prepend[K[46;28H[1;148H[39;49m(B[0;7m        [46;69H(B[m[1K (B[0;7m[ Wrote 20 lines ](B[m[K[47;27H(B[0;7m^O(B[m WriteOut[15X[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[15X[47;131H(B[0;7m^C(B[m Cur Pos[48;2H(B[0;7mX(B[m Exit  [48;27H(B[0;7m^J(B[m Justify[16X[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[22;23H[47d[J[48;157H[48;1H[?1049l[?1l>]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# nano test.sh[Kcat test.sh 
+#!/bin/bash
+
+exec 0<>/dev/console 1<>/dev/console 2<>/dev/console
+cat <<'msgend'
+Hello! You are in dracut module!
+ ___________________
+< I'm dracut module >
+ -------------------
+   \
+    \
+        .--.
+       |o_o |
+       |:_/ |
+      //   \ \
+     (|     | )
+    /'\_   _/`\
+    \___)=(___/
+msgend
+sleep 10
+echo " continuing...."
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# dracut -f -v
+Executing: /sbin/dracut -f -v
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+dracut module 'modsign' will not be installed, because command 'keyctl' could not be found!
+dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+95nfs: Could not find any command of 'rpcbind portmap'!
+*** Including module: bash ***
+*** Including module: test ***
+*** Including module: nss-softokn ***
+*** Including module: i18n ***
+*** Including module: network ***
+*** Including module: ifcfg ***
+*** Including module: drm ***
+*** Including module: plymouth ***
+*** Including module: dm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 60-persistent-storage-dm.rules
+Skipping udev rule: 55-dm.rules
+*** Including module: kernel-modules ***
+*** Including module: lvm ***
+Skipping udev rule: 64-device-mapper.rules
+Skipping udev rule: 56-lvm.rules
+Skipping udev rule: 60-persistent-storage-lvm.rules
+*** Including module: resume ***
+*** Including module: rootfs-block ***
+*** Including module: terminfo ***
+*** Including module: udev-rules ***
+Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Skipping udev rule: 91-permissions.rules
+*** Including module: biosdevname ***
+*** Including module: systemd ***
+*** Including module: usrmount ***
+*** Including module: base ***
+*** Including module: fs-lib ***
+*** Including module: microcode_ctl-fw_dir_override ***
+  microcode_ctl module: mangling fw_dir
+    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+intel: model '', path ' intel-ucode/*', kvers ''
+intel: blacklist ''
+    microcode_ctl: intel: Host-Only mode is enabled and ucode name does not match the expected one, skipping caveat ("06-4f-01" not in " intel-ucode/*")
+    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+intel-06-4f-01: model 'GenuineIntel 06-4f-01', path ' intel-ucode/06-4f-01', kvers ' 4.17.0 3.10.0-894 3.10.0-862.6.1 3.10.0-693.35.1 3.10.0-514.52.1 3.10.0-327.70.1 2.6.32-754.1.1 2.6.32-573.58.1 2.6.32-504.71.1 2.6.32-431.90.1 2.6.32-358.90.1'
+intel-06-4f-01: blacklist ''
+intel-06-4f-01: caveat is disabled in configuration
+    microcode_ctl: kernel version "3.10.0-1062.1.1.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+    microcode_ctl: final fw_dir: "/lib/firmware/updates /lib/firmware"
+*** Including module: shutdown ***
+*** Including modules done ***
+*** Installing kernel module dependencies and firmware ***
+*** Installing kernel module dependencies and firmware done ***
+*** Resolving executable dependencies ***
+*** Resolving executable dependencies done***
+*** Hardlinking files ***
+*** Hardlinking files done ***
+*** Stripping files ***
+*** Stripping files done ***
+*** Generating early-microcode cpio image contents ***
+*** Constructing GenuineIntel.bin ****
+*** No early-microcode cpio image needed ***
+*** Store current command line parameters ***
+*** Creating image file ***
+*** Creating image file done ***
+*** Creating initramfs image file '/boot/initramfs-3.10.0-1062.1.1.el7.x86_64.img' done ***
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# lsinitrd -m /boot/initramfs-$(uname -r).img | grep test
+[01;31m[Ktest[m[K
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# nano [K[K[K[K[Kfind / 0-[K[K-name grub.cfg
+/boot/efi/EFI/centos/grub.cfg
+]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# nano /boot/efi/EFI/centos/grub.cfg
+[?1049h[1;48r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.3.1                                 File: /boot/efi/EFI/centos/grub.cfg                                                                         [3;1H(B[m#[4d# DO NOT EDIT THIS FILE[5d#[6d# It is automatically generated by grub2-mkconfig using templates[7d# from /etc/grub.d and settings from /etc/default/grub[8d#[10d### BEGIN /etc/grub.d/00_header ###[11dset pager=1[13dif [ -s $prefix/grubenv ]; then[14;3Hload_env[15dfi[16dif [ "${next_entry}" ] ; then[17;4Hset default="${next_entry}"[18;4Hset next_entry=[19;4Hsave_env next_entry[20;4Hset boot_once=true[21delse[22dset default="${saved_entry}"[23dfi[25dif [ x"${feature_menuentry_id}" = xy ]; then[26;3Hmenuentry_id_option="--id"[27delse[28dmenuentry_id_option=""[29dfi[31dexport menuentry_id_option[33dif [ "${prev_saved_entry}" ]; then[34;3Hset saved_entry="${prev_saved_entry}"[35;3Hsave_env saved_entry[36;3Hset prev_saved_entry=[37;3Hsave_env prev_saved_entry[38;3Hset boot_once=true[39dfi[41dfunction savedefault {[42;3Hif [ -z "${boot_once}" ]; then[43;5Hsaved_entry="${chosen}"[44;5Hsave_env saved_entry[45;3Hfi[46;70H(B[0;7m[ Read 155 lines ][47d^G(B[m Get Help[47;27H(B[0;7m^O(B[m WriteOut[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[47;131H(B[0;7m^C(B[m Cur Pos[48d(B[0;7m^X(B[m Exit[48;27H(B[0;7m^J(B[m Justify[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[3d[46d(B[0;7mSearch:                                                                                                                                                      [47;28HY(B[m First Line[47;54H(B[0;7mT(B[m Go To Line[47;80H(B[0;7mW(B[m Beg of Par[47;105H(B[0;7mM-J(B[m FullJstify[47;131H(B[0;7mM-B(B[m Backwards[48;2H(B[0;7mC(B[m Cancel[48;28H(B[0;7mV(B[m Last Line[48;54H(B[0;7mR(B[m Replace [48;80H(B[0;7mO(B[m End of Par[48;105H(B[0;7mM-C(B[m Case Sens[48;131H(B[0;7mM-R(B[m Regexp[K[46;9H(B[0;7mr(B[m(B[0;7mh(B[m(B[0;7mg(B[m(B[0;7mb(B[m[3d  if [ -n "${GRUB2_PASSWORD}" ]; then[4d    set superusers="root"[5d    export superusers[6d    password_pbkdf2 root ${GRUB2_PASSWORD}[K[7d  fi[K[8dfi[9d### END /etc/grub.d/01_users ###[10d[K[11d### BEGIN /etc/grub.d/10_linux ###[12dmenuentry 'CentOS Linux (3.10.0-1062.1.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option '$[13;8H[1K	load_video[K[14;8H[1K	set gfxpayload=keep[15;8H[1K	insmod gzio[16;8H[1K	insmod part_gpt[K[17;8H[1K	insmod xfs[K[18;8H[1K	set root='hd0,gpt2'[19;8H[1K	if [ x$feature_platform_search_hint = xy ]; then[20;10H[1K search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt2 --hint-efi=hd0,gpt2 --hint-baremetal=ahci0,gpt2  2415e6ef-e592-4c05-89e8-97544d61529e[21;8H[1K	else[22;10H[1K search --no-floppy --fs-uuid --set=root 2415e6ef-e592-4c05-89e8-97544d61529e[23;8H[1K	fi[24d	linuxefi /vmlinuz-3.10.0-1062.1.1.el7.x86_64 root=/dev/mapper/cl-root ro crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap rhgb quiet LANG=en_US.$[25;8H[1K	initrdefi /initramfs-3.10.0-1062.1.1.el7.x86_64.img[26d}[K[27dmenuentry 'CentOS Linux (3.10.0-514.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnuli$[28;8H[1K	load_video[K[29;8H[1K	set gfxpayload=keep[30;9Hinsmod gzio[31;8H[1K	insmod part_gpt[K[32;9Hinsmod xfs[33;8H[1K	set root='hd0,gpt2'[K[34;8H[1K	if [ x$feature_platform_search_hint = xy ]; then[35;10H[1K search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt2 --hint-efi=hd0,gpt2 --hint-baremetal=ahci0,gpt2  2415e6ef-e592-4c05-89e8-97544d61529e[36;8H[1K	else[K[37;10H[1K search --no-floppy --fs-uuid --set=root 2415e6ef-e592-4c05-89e8-97544d61529e[38;8H[1K	fi[K[39;8H[1K	linuxefi /vmlinuz-3.10.0-514.el7.x86_64 root=/dev/mapper/cl-root ro crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap rhgb quiet LANG=en_US.UTF-8[40;9Hinitrdefi /initramfs-3.10.0-514.el7.x86_64.img[41d}[K[42dmenuentry 'CentOS Linux (0-rescue-1257f11861e1438083ad419778f42389) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuen$[43;5H    load_video[K[44;5H    insmod gzio[K[45;8H[1K	insmod part_gpt[46d[K[47;28H(B[0;7mO(B[m WriteOut  [47;54H(B[0;7mR(B[m Read File [47;80H(B[0;7mY(B[m Prev Page [47;105H(B[0;7m^K(B[m Cut Text   [47;131H(B[0;7m^C(B[m Cur Pos[K[48;2H(B[0;7mX(B[m Exit  [48;28H(B[0;7mJ(B[m Justify  [48;54H(B[0;7mW(B[m Where Is[48;80H(B[0;7mV(B[m Next Page [48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[24;135Hr	gb quie	 [Zquie	[1;148H(B[0;7mModified[24;144H(B[m LANG=en_US.U[24;144H LANG=en_US.UT[24;143H LANG=en_US.UTF[24;142H LANG=en_US.UTF-8[24;141H[1P[1P[1P[Z[1P[1P[1P[1P[46d(B[0;7mSearch [rhgb]:                                                                                                                                               [47;28HY(B[m First Line[47;54H(B[0;7mT(B[m Go To Line[47;80H(B[0;7mW(B[m Beg of Par[47;105H(B[0;7mM-J(B[m FullJstify[47;131H(B[0;7mM-B(B[m Backwards[48;2H(B[0;7mC(B[m Cancel[48;28H(B[0;7mV(B[m Last Line[48;54H(B[0;7mR(B[m Replace [48;80H(B[0;7mO(B[m End of Par[48;105H(B[0;7mM-C(B[m Case Sens[48;131H(B[0;7mM-R(B[m Regexp[K[46;16H[K[47;28H(B[0;7mO(B[m WriteOut  [47;54H(B[0;7mR(B[m Read File [47;80H(B[0;7mY(B[m Prev Page [47;105H(B[0;7m^K(B[m Cut Text   [47;131H(B[0;7m^C(B[m Cur Pos[K[48;2H(B[0;7mX(B[m Exit  [48;28H(B[0;7mJ(B[m Justify  [48;54H(B[0;7mW(B[m Where Is[48;80H(B[0;7mV(B[m Next Page [48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[39;130Hrhgb q	iet [1P[1P[1P[Z[1P[1P[1P[1P[1P[1P[1P[1P[46d(B[0;7mSearch [rhgb]:                                                                                                                                               [47;28HY(B[m First Line[47;54H(B[0;7mT(B[m Go To Line[47;80H(B[0;7mW(B[m Beg of Par[47;105H(B[0;7mM-J(B[m FullJstify[47;131H(B[0;7mM-B(B[m Backwards[48;2H(B[0;7mC(B[m Cancel[48;28H(B[0;7mV(B[m Last Line[48;54H(B[0;7mR(B[m Replace [48;80H(B[0;7mO(B[m End of Par[48;105H(B[0;7mM-C(B[m Case Sens[48;131H(B[0;7mM-R(B[m Regexp[K[46;16H[3;8H[1K	insmod xfs[K[4;5H    set root='hd0,gpt2'[5;5H    if [ x$feature_platform_search_hint = xy ]; then[6;10H[1K search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt2 --hint-efi=hd0,gpt2 --hint-baremetal=ahci0,gpt2  2415e6ef-e592-4c05-89e8-97544d61529e[7;8H[1K	else[8;10H[1K search --no-floppy --fs-uuid --set=root 2415e6ef-e592-4c05-89e8-97544d61529e[9;8H[1K	fi[K[10d	linuxefi /vmlinuz-3.10.0-514.el7.x86_64 root=/dev/mapper/cl-root ro crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap LANG=en_US.UTF-8[11;8H[1K	initrdefi /initramfs-3.10.0-514.el7.x86_64.img[12d}[K[13dmenuentry 'CentOS Linux (0-rescue-1257f11861e1438083ad419778f42389) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuen$[14;9Hload_video[K[24;27H0-rescue-1257f11861e1438083ad419778f42389 root=/dev/mapper/cl-root ro crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap rhgb qu$[25;30H0-rescue-1257f11861e1438083ad419778f42389.img[27d[K[28d### END /etc/grub.d/10_linux ###[29d[K[30d### BEGIN /etc/grub.d/20_linux_xen ###[31d### END /etc/grub.d/20_linux_xen ###[32d[K[33d### BEGIN /etc/grub.d/20_ppc_terminfo ###[34d### END /etc/grub.d/20_ppc_terminfo ###[K[35d[K[36d### BEGIN /etc/grub.d/30_os-prober ###[37d### END /etc/grub.d/30_os-prober ###[K[38d[K[39d### BEGIN /etc/grub.d/40_custom ###[K[40d# This file provides an easy way to add custom menu entries.  Simply type the[41d# menu entries you want to add after this comment.  Be careful not to change[42d# the 'exec tail' line above.[K[43d### END /etc/grub.d/40_custom ###[44d[K[45d### BEGIN /etc/grub.d/41_custom ###[46d[K[47;28H(B[0;7mO(B[m WriteOut  [47;54H(B[0;7mR(B[m Read File [47;80H(B[0;7mY(B[m Prev Page [47;105H(B[0;7m^K(B[m Cut Text   [47;131H(B[0;7m^C(B[m Cur Pos[K[48;2H(B[0;7mX(B[m Exit  [48;28H(B[0;7mJ(B[m Justify  [48;54H(B[0;7mW(B[m Where Is[48;80H(B[0;7mV(B[m Next Page [48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[24;150Hrh	b q$hgb quiet[K[Z	et 	 	 [1K	linuxefi /vmlinuz-0-rescue-1257f11861e1438083ad419778f42389 root=/dev/mapper/cl-root ro crashkernel=auto rd.lvm.lv=cl/root rd.lvm.lv=cl/swap rhgb q [Z [Z   [46d(B[0;7mSearch [rhgb]:                                                                                                                                               [47;28HY(B[m First Line[47;54H(B[0;7mT(B[m Go To Line[47;80H(B[0;7mW(B[m Beg of Par[47;105H(B[0;7mM-J(B[m FullJstify[47;131H(B[0;7mM-B(B[m Backwards[48;2H(B[0;7mC(B[m Cancel[48;28H(B[0;7mV(B[m Last Line[48;54H(B[0;7mR(B[m Replace [48;80H(B[0;7mO(B[m End of Par[48;105H(B[0;7mM-C(B[m Case Sens[48;131H(B[0;7mM-R(B[m Regexp[K[46;16H[46;68H[1K (B[0;7m[ "rhgb" not found ](B[m[K[47;28H(B[0;7mO(B[m WriteOut  [47;54H(B[0;7mR(B[m Read File [47;80H(B[0;7mY(B[m Prev Page [47;105H(B[0;7m^K(B[m Cut Text   [47;131H(B[0;7m^C(B[m Cur Pos[K[48;2H(B[0;7mX(B[m Exit  [48;28H(B[0;7mJ(B[m Justify  [48;54H(B[0;7mW(B[m Where Is[48;80H(B[0;7mV(B[m Next Page [48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[24;149H[46d(B[0;7mFile Name to Write: /boot/efi/EFI/centos/grub.cfg                                                                                                            [47;27H(B[m             (B[0;7mM-D(B[m DOS Format           [47;79H(B[0;7mM-A(B[m Append  [47;105H             (B[0;7mM-B(B[m Backup File[K[48;2H(B[0;7mC(B[m Cancel[48;27H             (B[0;7mM-M(B[m Mac Format          [48;79H(B[0;7mM-P(B[m Prepend[K[46;50H[1;148H[39;49m(B[0;7m        [46;69H(B[m[1K (B[0;7m[ Wrote 155 lines ](B[m[K[47;27H(B[0;7m^O(B[m WriteOut[15X[47;53H(B[0;7m^R(B[m Read File[47;79H(B[0;7m^Y(B[m Prev Page[47;105H(B[0;7m^K(B[m Cut Text[15X[47;131H(B[0;7m^C(B[m Cur Pos[48;2H(B[0;7mX(B[m Exit  [48;27H(B[0;7m^J(B[m Justify[16X[48;53H(B[0;7m^W(B[m Where Is[48;79H(B[0;7m^V(B[m Next Page[48;105H(B[0;7m^U(B[m UnCut Text[48;131H(B[0;7m^T(B[m To Spell[24;149H[47d[J[48;157H[48;1H[?1049l[?1l>]0;root@localhost:/usr/lib/dracut/modules.d/01test[root@localhost 01test]# exit
+exit
+
+Script done on Thu 17 Oct 2019 12:26:09 AM MSK
